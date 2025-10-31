@@ -1,0 +1,13 @@
+button {
+  background-color: var(--primary-color);
+  padding: 4px 20px;
+  font-size: 17px;
+  text-transform: capitalize;
+  font-weight: 500;
+  color: var(--white-color);
+}
+button:hover,
+button:focus {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}

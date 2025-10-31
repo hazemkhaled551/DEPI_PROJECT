@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  
 }
 :root {
   --primary-color: #df6951;
@@ -13,5 +14,11 @@
   --light-gray-color: #f2f2f2;
   --paragraph-color: #5e6282;
   --main-font :  'Poppins', sans-serif;
- 
 }
+
+body {
+  font-family: var(--main-font);
+  /* background-color: var(--secondary-color);   */
+
+}
+
