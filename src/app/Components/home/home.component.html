@@ -405,3 +405,22 @@
     </div>
   </div>
 </section>
+
+<!--Popular packages-->
+<section class="popular-packages py-5">
+
+  <div class="container">
+    <div class="heading">
+      <span>trendy</span>
+      <h2>Our Trending Tour <br> Packages</h2>
+    </div>
+    <div class="package-cards mt-5">
+      <div class="row gy-4">
+        <div *ngFor="let package of packagesData" class="col-12 col-lg-4">
+          <app-package-card [package]="package"></app-package-card>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<app-feedback></app-feedback>
