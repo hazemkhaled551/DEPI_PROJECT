@@ -1,0 +1,372 @@
+@import url("https://fonts.googleapis.com/css2?family=Volkhov:wght@400;700&display=swap");
+
+body {
+  font-family: "Volkhov", serif;
+}
+
+/* main */
+main {
+  background-image: url("../../../assets/Home.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+main::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  background-color: #00000054;
+}
+
+main .content {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+main .content img {
+  width: 78.35px;
+  height: 15.67px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+main .content h1 {
+  font-size: 58.51px;
+  font-weight: 700;
+  line-height: 67.91px;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+main .content form {
+  background-color: #f3f3f399;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  padding: 15px;
+  border-radius: 5.22px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+main .content form input,
+main .content form select {
+  background-color: transparent;
+  border: none;
+  width: 140px;
+  font-size: 18.81px;
+  color: #fff;
+  padding: 8px 4px;
+  position: relative;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+}
+
+main .content form .location,
+main .content form .type {
+  position: relative;
+  margin-right: 10px;
+}
+
+main .content form .location::after,
+main .content form .type::after {
+  content: "";
+  position: absolute;
+  height: 37px;
+  width: 3px;
+  top: 5px;
+  right: -24px;
+  background-color: #d0d0d0;
+}
+
+main .content form input::placeholder {
+  color: #ddd;
+}
+
+main .content form select option {
+  color: #000;
+}
+
+/*end main*/
+/* companies */
+.companies {
+  padding: 40px 0;
+  background-color: #f7f7f7;
+}
+.companies .company {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+}
+.companies .company img {
+  /* width: 100%; */
+  height: 100%;
+  object-fit: cover;
+}
+/*end companies */
+
+/* category */
+
+.category .heading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.category .heading h2 {
+  font-size: 50px;
+  font-weight: 700;
+  font-family: "Volkhov", serif;
+  color: var(--secondary-color);
+}
+
+.category .heading p {
+  font-size: 18px;
+  color: var(--primary-color);
+  font-weight: 600;
+}
+.category .catigories .category-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 200px;
+  height: 250px;
+  padding: 20px 10px;
+  border-radius: 36px;
+  position: relative;
+  background-color: var(--white-color);
+  transition: all 0.3s ease-in-out;
+}
+.category .catigories .category-item::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 137px;
+  left: 3px;
+  border-radius: 36px;
+  background-color: var(--primary-color);
+  z-index: -1;
+  /* opacity: 0; */
+  transition: all 0.3s ease-in-out;
+}
+
+.category .catigories .category-item:hover::before {
+  opacity: 1;
+  top: 185px;
+  left: -50px;
+}
+.category .catigories .category-item:hover {
+  box-shadow: 13px -7px 20px rgba(0, 0, 0, 0.2);
+}
+.category .catigories .category-item .img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+}
+.category .catigories .category-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.category .catigories .category-item h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--secondary-color);
+  margin-top: 20px;
+}
+.category .catigories .category-item p {
+  font-size: 14px;
+  color: var(--paragraph-color);
+  font-weight: 500;
+}
+/*end category */
+/*start honeymoon */
+.honeymoon .honeymoon-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.honeymoon .honeymoon-content {
+  width: 100%;
+  max-width: 583px;
+}
+.honeymoon .honeymoon-content span {
+  font-size: 18px;
+  color: var(--primary-color);
+  font-weight: 700;
+}
+.honeymoon .honeymoon-content h2 {
+  font-size: 50px;
+  font-weight: 700;
+  font-family: "Volkhov", serif;
+  color: var(--secondary-color);
+  margin: 20px 0;
+}
+.honeymoon .honeymoon-content p {
+  font-size: 16px;
+  color: var(--black-color);
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+/*end honeymoon */
+
+/* start tour */
+.tours .tours-content {
+  width: 100%;
+  max-width: 583px;
+}
+.tours .tours-content span {
+  font-size: 18px;
+  color: var(--primary-color);
+  font-weight: 700;
+}
+.tours .tours-content h2 {
+  font-size: 50px;
+  font-weight: 700;
+  font-family: "Volkhov", serif;
+  color: var(--secondary-color);
+  margin: 20px 0;
+}
+.tours .tours-content ul {
+  list-style: none;
+  padding: 0;
+}
+.tours .tours-content ul li {
+  display: flex;
+  justify-content: space-around;
+  align-items: start;
+  margin-bottom: 20px;
+}
+.tours .tours-content ul li .icon {
+  margin-right: 10px;
+}
+
+.tours .tours-content ul li .text h4 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--paragraph-color);
+}
+.tours .tours-content ul li .text p {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--paragraph-color);
+}
+.tours .tours-image {
+  height: 600px;
+}
+.tours .tours-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* end tour */
+/*start banner*/
+.banner {
+  background-image: url("../../../assets/Rectangle\ 19294.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 100px 0;
+  position: relative;
+  z-index: 1;
+}
+.banner h2 {
+  font-family: "Volkhov", serif;
+  text-transform: capitalize;
+  font-size: 50px;
+  font-weight: 700;
+  color: var(--white-color);
+}
+
+/*end banner*/
+/*start promotion*/
+.promotion {
+  padding: 70px 0;
+  position: relative;
+}
+.promotion .content span {
+  font-size: 18px;
+  text-transform: uppercase;
+  color: var(--primary-color);
+  font-weight: 700;
+}
+.promotion .content h2 {
+  font-size: 50px;
+  font-weight: 700;
+  font-family: "Volkhov", serif;
+  color: var(--secondary-color);
+  margin: 20px 0;
+}
+
+
+.promotion .promotion-img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.promotion .destinision{
+  position: absolute;
+  z-index:5;
+  bottom: 80px;
+}
+.promotion .destinision img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/*end promotion*/
+/* Responsive */
+@media (max-width: 767px) {
+  .content {
+    text-align: center;
+    margin: 100px 0;
+    top: 0;
+    transform: none;
+  }
+
+  .content h1 {
+    font-size: 32px;
+    line-height: 1.3;
+  }
+
+  .content img {
+    width: 100px;
+    height: auto;
+  }
+
+  .content form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .content form input,
+  .content form select {
+    width: 100%;
+  }
+
+  .content form .location::after,
+  .content form .type::after {
+    display: none;
+  }
+  .tours .tours-content {
+    width: 100%;
+    /* min-width:  458px; */
+  }
+}
