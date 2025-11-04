@@ -1,100 +1,46 @@
+<!-- HERO SECTION -->
 <section class="hero">
-  <div class="overlay"></div>
-  <div class="hero-content">
-    <h1>Discover Your Next Destination</h1>
-    <p>Unforgettable journeys start here — explore the world with us</p>
-    <button class="explore-btn">Start Exploring</button>
+  <div class="overlay">
+    <h1>Travel With Us</h1>
+    <p>Explore the world's most beautiful destinations</p>
+    <button class="btn-main">Get In Touch</button>
   </div>
 </section>
 
-<section class="destinations">
-  <h2 class="section-title">Popular Destinations</h2>
+<!-- FILTER BAR -->
+<div class="filter-bar">
+  <button>Date</button>
+  <button>Price Low To High</button>
+  <button>Price High To Low</button>
+  <button>Name (A–Z)</button>
+</div>
+
+<!-- MAIN CONTENT SECTION -->
+<div class="content-section">
+  <!-- LEFT SIDE: TRAVEL CARDS -->
   <div class="cards-container">
-    <div class="card" data-aos="fade-up" data-aos-delay="100">
-      <img src="assets/product/switzerland.jpg" alt="Switzerland" />
-      <div class="card-body">
-        <h3>Switzerland</h3>
-        <p>Snowy mountains, crystal lakes, and cozy towns await you.</p>
-      </div>
-    </div>
-
-    <div class="card" data-aos="fade-up" data-aos-delay="200">
-      <img src="assets/product/berlin.jpg" alt="Berlin" />
-      <div class="card-body">
-        <h3>Berlin</h3>
-        <p>Modern architecture meets rich cultural history.</p>
-      </div>
-    </div>
-
-    <div class="card" data-aos="fade-up" data-aos-delay="300">
-      <img src="assets/product/maldives.jpg" alt="Maldives" />
-      <div class="card-body">
-        <h3>Maldives</h3>
-        <p>Experience paradise surrounded by turquoise waters.</p>
-      </div>
-    </div>
-
-    <div class="card" data-aos="fade-up" data-aos-delay="400">
-      <img src="assets/product/toronto.jpg" alt="Toronto" />
-      <div class="card-body">
-        <h3>Toronto</h3>
-        <p>Discover the vibrant culture of Canada’s modern city.</p>
-      </div>
-    </div>
-
-    <div class="card" data-aos="fade-up" data-aos-delay="500">
-      <img src="assets/product/baku.jpg" alt="Baku" />
-      <div class="card-body">
-        <h3>Baku</h3>
-        <p>Where East meets West with elegance and charm.</p>
-      </div>
-    </div>
-
-    <div class="card" data-aos="fade-up" data-aos-delay="600">
-      <img src="assets/product/chinese.jpg" alt="China" />
-      <div class="card-body">
-        <h3>China</h3>
-        <p>Explore ancient wonders and futuristic skylines.</p>
+    <div class="card" *ngFor="let product of products">
+      <img [src]="product.image" [alt]="product.title" />
+      <div class="card-info">
+        <h3>{{ product.title }}</h3>
+        <p>{{ product.description }}</p>
+        <div class="price">{{ product.price | currency:'USD' }}</div>
       </div>
     </div>
   </div>
-</section>
-<!-- ====== Special Offers Section ====== -->
-<section class="offers">
-  <h2 class="section-title">Special Offers</h2>
-  <div class="offers-container">
-    <div class="offer-card">
-      <img src="assets/product/maldives.jpg" alt="Maldives" />
-      <div class="offer-body">
-        <h3>Maldives Escape</h3>
-        <p>Save 20% on all Maldives packages this month only!</p>
-        <button class="book-btn">Book Now</button>
-      </div>
-    </div>
 
-    <div class="offer-card">
-      <img src="assets/product/switzerland.jpg" alt="Switzerland" />
-      <div class="offer-body">
-        <h3>Swiss Adventure</h3>
-        <p>Explore the Alps — flights and hotels included.</p>
-        <button class="book-btn">Book Now</button>
-      </div>
+  <!-- RIGHT SIDE: FILTER + IMAGE -->
+  <div class="filter-section">
+    <h3>Plan Your Trip</h3>
+    <input type="text" placeholder="Search Tour" [(ngModel)]="searchTerm" (input)="filterProducts()" />
+    <input type="date" [(ngModel)]="selectedDate" />
+    <button class="book-btn">Book Now</button>
+
+    <h4>Filter by Price</h4>
+    <input type="range" min="500" max="2500" [(ngModel)]="priceRange" (input)="filterProducts()" />
+
+    <div class="travel-image">
+      <img src="assets/product/travel-set.png" alt="Travel Items" />
     </div>
   </div>
-</section>
-
-<!-- ====== Contact Section ====== -->
-<section class="contact">
-  <div class="contact-overlay"></div>
-  <div class="contact-content">
-    <h2>Contact Us</h2>
-    <p>Have questions? We’re here to help you plan your dream trip.</p>
-    <form class="contact-form">
-      <input type="text" placeholder="Your Name" required />
-      <input type="email" placeholder="Your Email" required />
-      <textarea placeholder="Your Message" rows="4" required></textarea>
-      <button type="submit" class="send-btn">Send Message</button>
-    </form>
-  </div>
-</section>
-
+</div>
