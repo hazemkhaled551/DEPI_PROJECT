@@ -1,0 +1,119 @@
+footer{
+    background-image: url("../../../assets/Footer.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 60px 0;
+    position: relative;
+}
+.footer .item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    
+}
+
+.footer .item .logo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.footer .item p{
+    color: var(-paragraph-color);
+    margin-top: 20px;
+}
+.footer .item .social{
+    margin-top: 10px;
+}
+.footer .item .social i{
+    color: var(--primary-color);
+    margin-right: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    transition:all 0.3s ease-in-out;
+}
+.footer .item .social i:hover{
+    color: var(--secondary-color);
+}
+.footer .company, .footer .destination{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+.footer .company h3, .footer .destination h3{
+    color: var(--secondary-color);
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    text-transform: capitalize;
+}
+.footer .company ul, .footer .destination ul{
+    list-style: none;
+    padding: 0;
+}
+.footer .company ul li, .footer .destination ul li{
+    margin-bottom: 20px;
+}
+.footer .company ul li a, .footer .destination ul li a{
+    color: var(--paragraph-color);
+    text-decoration: none;
+    transition:all 0.3s ease-in-out;
+}
+.footer .company ul li a:hover, .footer .destination ul li a:hover{
+    color: var(--secondary-color);
+}
+
+.footer .quick-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+.footer .quick-form h3{
+    color: var(--secondary-color);
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    text-transform: capitalize;
+}
+
+.footer .quick-form form{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+.footer .quick-form form input{
+    background-color: #EEEEFF;
+    padding: 10px 0 10px 10px;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 10px;
+}
+.footer .quick-form form button{
+  
+    padding: 10px ;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    cursor: pointer;
+    transition:all 0.3s ease-in-out;
+}
+.footer .quick-form form button:hover{
+    background-color: var(--secondary-color);
+}
+
+.footer .quick-form p{
+    color: var(--paragraph-color);
+    margin-top: 20px;
+}
+
+.copy-right{
+    text-align: center;
+    color: var(--paragraph-color);
+    margin-top: 50px;
+    font-size: 14px;
+    border-top: 1px solid var(--paragraph-color);
+    padding-top: 20px;
+}
