@@ -1,0 +1,9 @@
+h1{
+    color: var(--primary-color);
+    font-size: 50px;
+    font-weight: 700;
+    font-family: "Volkhov", serif;
+    text-align: center;
+    margin: 40px 0;
+    padding: 60px  0;
+}
