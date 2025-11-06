@@ -1,0 +1,46 @@
+<!-- HERO SECTION -->
+<section class="hero">
+  <div class="overlay">
+    <h1>Travel With Us</h1>
+    <p>Explore the world's most beautiful destinations</p>
+    <button class="btn-main">Get In Touch</button>
+  </div>
+</section>
+
+<!-- FILTER BAR -->
+<div class="filter-bar">
+  <button>Date</button>
+  <button>Price Low To High</button>
+  <button>Price High To Low</button>
+  <button>Name (A–Z)</button>
+</div>
+
+<!-- MAIN CONTENT SECTION -->
+<div class="content-section">
+  <!-- LEFT SIDE: TRAVEL CARDS -->
+  <div class="cards-container">
+    <div class="card" *ngFor="let product of products">
+      <img [src]="product.image" [alt]="product.title" />
+      <div class="card-info">
+        <h3>{{ product.title }}</h3>
+        <p>{{ product.description }}</p>
+        <div class="price">{{ product.price | currency:'USD' }}</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- RIGHT SIDE: FILTER + IMAGE -->
+  <div class="filter-section">
+    <h3>Plan Your Trip</h3>
+    <input type="text" placeholder="Search Tour" [(ngModel)]="searchTerm" (input)="filterProducts()" />
+    <input type="date" [(ngModel)]="selectedDate" />
+    <button class="book-btn">Book Now</button>
+
+    <h4>Filter by Price</h4>
+    <input type="range" min="500" max="2500" [(ngModel)]="priceRange" (input)="filterProducts()" />
+
+    <div class="travel-image">
+      <img src="assets/product/travel-set.png" alt="Travel Items" />
+    </div>
+  </div>
+</div>
