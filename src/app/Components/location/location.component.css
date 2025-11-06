@@ -1,0 +1,6 @@
+.map-sec h2 {
+  font-size: 32px;
+  font-weight: 700;
+  font-family: "Volkhov", serif;
+  color: var(--secondary-color);
+}

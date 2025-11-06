@@ -1,0 +1,43 @@
+<div class="package-card">
+  <div class="images">
+    <img [src]="package.img" alt="" />
+    <div class="flag">
+      <img [src]="package.flag" alt="" />
+    </div>
+  </div>
+  <div class="content">
+    <div class="d-flex mt-4">
+      <div class="days me-5">
+        <i class="fa-regular fa-calendar"></i>{{ package.days }} days
+      </div>
+      <div class="pepoleNum">
+        <i class="fa-solid fa-user"></i>{{ package.pepoleGoing }} people going
+      </div>
+    </div>
+    <div class="title d-flex justify-content-between mt-3">
+      <h3>{{ package.Title }}</h3>
+      <div class="stars d-flex align-items-center justify-content-center">
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+      </div>
+    </div>
+    <div class="location">
+      <i class="fa-solid fa-location-dot me-2"></i>{{ package.country }}
+    </div>
+    <div class="price d-flex  align-items-centermt-3">
+      <h3>{{ package.DISC | currency : "USD" }}</h3>
+      <h3 class="disc ms-3">
+        <del>{{ package.price | currency : "USD" }}</del>
+      </h3>
+    </div>
+    <div class="description">
+      <p>{{ package.description }}</p>
+    </div>
+    <div class="button mt-5">
+      <app-button label="Explor Now"></app-button>
+    </div>
+  </div>
+</div>

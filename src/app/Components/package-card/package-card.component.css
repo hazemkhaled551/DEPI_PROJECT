@@ -1,0 +1,51 @@
+.package-card {
+  overflow: hidden;
+  border-radius: 10px;
+  max-width: 395px;
+  margin: 0 auto;
+}
+.package-card .images {
+  position: relative;
+  margin-bottom: 30px;
+}
+.package-card .images img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.package-card .images .flag {
+  position: absolute;
+  bottom: -75px;
+  left: 0;
+}
+.package-card .content .days,
+.package-card .content .pepoleNum,
+.package-card .content .location {
+  color: var(--paragraph-color);
+}
+.package-card .content .title h3 {
+  color: var(--secondary-color);
+  font-size: 30px;
+  font-weight: 700;
+  margin: 20px 0;
+}
+.package-card .content .title .stars {
+  color: #ffba0a;
+}
+
+.package-card .content .price h3 {
+  color: var(--primary-color);
+  font-size: 30px;
+  font-weight: 700;
+  margin: 20px 0;
+}
+.package-card .content .price .disc {
+  color: var(--paragraph-color);
+  font-size: 22px;
+  font-weight: 400;
+}
+.package-card .content .description{
+  color: var(--paragraph-color);
+  font-size: 16px;
+  font-weight: 400;
+}

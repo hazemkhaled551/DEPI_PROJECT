@@ -1,0 +1,28 @@
+<section class="feedback py-5">
+  <div class="container">
+    <div class="heading">
+      <span>Promotion</span>
+      <h2>
+        See What Our Clients Say <br />
+        About Us
+      </h2>
+    </div>
+    <div class="feedback-cards mt-5">
+      <owl-carousel-o [options]="customOptions">
+        <ng-container *ngFor="let item of tests">
+          <ng-template carouselSlide>
+            <div class="feedback-card">
+              <div class="image">
+                <img [src]="item.image" [alt]="item.name" />
+              </div>
+              <div class="content">
+                <p>{{ item.test }}</p>
+                <h3>{{ item.name }}</h3>
+              </div>
+            </div>
+          </ng-template>
+        </ng-container>
+      </owl-carousel-o>
+    </div>
+  </div>
+</section>

@@ -116,7 +116,7 @@ main .content form select option {
 
 /* category */
 
-.category .heading {
+.category .heading, .popular-packages .heading {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -125,7 +125,7 @@ main .content form select option {
   margin-bottom: 20px;
 }
 
-.category .heading h2 {
+.category .heading h2 , .popular-packages .heading h2{
   font-size: 50px;
   font-weight: 700;
   font-family: "Volkhov", serif;
@@ -205,10 +205,11 @@ main .content form select option {
   width: 100%;
   max-width: 583px;
 }
-.honeymoon .honeymoon-content span {
+.honeymoon .honeymoon-content span, .popular-packages .heading span {
   font-size: 18px;
   color: var(--primary-color);
   font-weight: 700;
+  text-transform: uppercase;
 }
 .honeymoon .honeymoon-content h2 {
   font-size: 50px;
