@@ -1,0 +1,349 @@
+.tour-plan-page {
+  width: 100%;
+}
+
+.hero-section {
+  position: relative;
+  height: 600px;
+  background: linear-gradient(135deg, #0c3d6e 0%, #1e5a8e 50%, #4a90c4 100%);
+  background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&h=400&fit=crop');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(12, 61, 110, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content {
+  text-align: center;
+  color: white;
+  z-index: 1;
+}
+
+.hero-subtitle {
+  font-size: 14px;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+.hero-title {
+  font-size: 72px;
+  font-weight: 300;
+  font-style: italic;
+  margin: 0;
+  font-family: 'Brush Script MT', cursive, 'Segoe UI', sans-serif;
+  letter-spacing: 2px;
+}
+
+.main-content-wrapper {
+  position: relative;
+  z-index: 100;
+}
+
+.main-content-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 100px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #fafafa;
+  z-index: -1;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  margin-top: -100px;
+  padding-bottom: 60px;
+}
+
+.content-card {
+  background: white;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+
+.tabs-section {
+  border-bottom: none;
+  padding: 0;
+  background: #f5f5f5;
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-between;
+  gap: 0;
+}
+
+.tab-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 35px 30px;
+  background: transparent;
+  border: none;
+  border-bottom: 3px solid transparent;
+  color: #666;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  flex: 1;
+}
+
+.tab-btn svg {
+  width: 20px;
+  height: 20px;
+}
+
+.tab-btn:hover {
+  color: #333;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.tab-btn.active {
+  color: #1a1a1a;
+  border-bottom-color: #FF6B6B;
+  background: white;
+}
+
+/* Content Grid */
+.content-grid {
+  display: grid;
+  grid-template-columns: 1fr 480px;
+  gap: 50px;
+  align-items: start;
+  padding: 50px 40px;
+}
+
+/* Tour Plan Column */
+.tour-plan-column {
+  padding: 0;
+}
+
+.section-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 40px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.tour-days {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+.tour-day {
+  display: flex;
+  gap: 25px;
+  position: relative;
+}
+
+.tour-day:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  left: 23px;
+  top: 50px;
+  bottom: -35px;
+  width: 2px;
+  background: transparent;
+  border-left: 2px dashed #DF6951;
+}
+
+.day-badge {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  background: #DF6951;
+  color: white;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 700;
+  z-index: 1;
+}
+
+.day-content {
+  flex: 1;
+  padding-top: 2px;
+}
+
+.day-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 12px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.day-description {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+.amenities-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.amenity-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: #555;
+}
+
+.amenity-item svg {
+  color: #4CAF50;
+  flex-shrink: 0;
+}
+
+/* Booking Column */
+.booking-column {
+  position: sticky;
+  top: 100px;
+}
+
+.travel-items {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.travel-items img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .container {
+    margin-top: -80px;
+  }
+
+  .main-content-wrapper::before {
+    top: 80px;
+  }
+
+  .content-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 40px 30px;
+  }
+
+  .booking-column {
+    position: static;
+  }
+
+  .hero-title {
+    font-size: 56px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    margin-top: -60px;
+  }
+
+  .main-content-wrapper::before {
+    top: 60px;
+  }
+
+  .content-card {
+    border-radius: 8px;
+  }
+
+  .tabs {
+    overflow-x: auto;
+    justify-content: flex-start;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .tab-btn {
+    padding: 20px 15px;
+    font-size: 13px;
+    white-space: nowrap;
+    flex: 0 0 auto;
+    min-width: 120px;
+  }
+
+  .hero-section {
+    height: 300px;
+  }
+
+  .hero-title {
+    font-size: 42px;
+  }
+
+  .content-grid {
+    padding: 30px 20px;
+  }
+
+  .section-title {
+    font-size: 26px;
+  }
+
+  .tour-day {
+    gap: 20px;
+  }
+
+  .day-badge {
+    width: 42px;
+    height: 42px;
+    font-size: 16px;
+  }
+
+  .tour-day:not(:last-child)::after {
+    left: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 36px;
+  }
+
+  .hero-subtitle {
+    font-size: 12px;
+  }
+
+  .tab-btn {
+    padding: 16px 20px;
+  }
+
+  .tab-btn svg {
+    width: 18px;
+    height: 18px;
+  }
+}
