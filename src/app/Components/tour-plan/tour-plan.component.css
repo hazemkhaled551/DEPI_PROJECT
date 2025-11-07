@@ -1,6 +1,9 @@
 .tour-plan-page {
   width: 100%;
 }
+a{
+  text-decoration: none;
+}
 
 .hero-section {
   position: relative;

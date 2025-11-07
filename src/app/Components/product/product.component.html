@@ -20,11 +20,13 @@
   <!-- LEFT SIDE: TRAVEL CARDS -->
   <div class="cards-container">
     <div class="card" *ngFor="let product of products">
-      <img [src]="product.image" [alt]="product.title" />
+      <a [routerLink]="['/packages-details']">
+        <img [src]="product.image" [alt]="product.title" />
+      </a>
       <div class="card-info">
         <h3>{{ product.title }}</h3>
         <p>{{ product.description }}</p>
-        <div class="price">{{ product.price | currency:'USD' }}</div>
+        <div class="price">{{ product.price | currency : "USD" }}</div>
       </div>
     </div>
   </div>
@@ -32,12 +34,23 @@
   <!-- RIGHT SIDE: FILTER + IMAGE -->
   <div class="filter-section">
     <h3>Plan Your Trip</h3>
-    <input type="text" placeholder="Search Tour" [(ngModel)]="searchTerm" (input)="filterProducts()" />
+    <input
+      type="text"
+      placeholder="Search Tour"
+      [(ngModel)]="searchTerm"
+      (input)="filterProducts()"
+    />
     <input type="date" [(ngModel)]="selectedDate" />
     <button class="book-btn">Book Now</button>
 
     <h4>Filter by Price</h4>
-    <input type="range" min="500" max="2500" [(ngModel)]="priceRange" (input)="filterProducts()" />
+    <input
+      type="range"
+      min="500"
+      max="2500"
+      [(ngModel)]="priceRange"
+      (input)="filterProducts()"
+    />
 
     <div class="travel-image">
       <img src="assets/product/travel-set.png" alt="Travel Items" />
