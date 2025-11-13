@@ -1,0 +1,75 @@
+/* الأساسيات */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url('/Project/src/assest/Group\ 1000001754.png') center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: white;
+}
+
+/* الشريط العلوي */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ff6f61;
+}
+
+.contact-btn {
+  background: #ff6f61;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-btn:hover {
+  background: #ff856f;
+}
+
+/* النص اللي فوق الصورة */
+.hero-content {
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.hero-content h2 {
+  font-size: 22px;
+  letter-spacing: 3px;
+  margin: 0;
+}
+
+.hero-content h1 {
+  font-size: 64px;
+  font-weight: 700;
+  margin-top: 10px;
+}
