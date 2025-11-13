@@ -1,0 +1,251 @@
+<div class="container">
+  <div class="gallery">
+    <img src="../../../assets/gallery/1.png" alt="Tour 1" />
+    <img src="../../../assets/gallery/22.png" alt="Tour 2" />
+    <img src="../../../assets/gallery/55.png" alt="Tour 3" />
+    <img src="../../../assets/gallery/4.png" alt="Tour 4" />
+    <img src="../../../assets/gallery/3.png" alt="Tour 5" />
+    <img src="../../../assets/gallery/6.png" alt="Tour 6" />
+    <img src="../../../assets/gallery/5.png" alt="Tour 7" />
+  </div>
+</div>
+
+<div class="booking-form-container">
+  <h2 class="form-title">Book This Tour</h2>
+  <p class="form-description">
+    Ex optio sequi et quos praesentium in nostrum labore nam rerum iusto aut
+    magni nesciunt? Quo quidem neque iste expedita est dolo.
+  </p>
+
+  <form [formGroup]="bookingForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <div class="input-wrapper">
+        <svg
+          class="input-icon"
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+          <circle cx="12" cy="7" r="4"></circle>
+        </svg>
+        <input
+          type="text"
+          formControlName="name"
+          placeholder="Name"
+          [class.invalid]="submitted && f['name'].errors"
+        />
+      </div>
+      <div *ngIf="submitted && f['name'].errors" class="error-message">
+        <span *ngIf="f['name'].errors['required']">Name is required</span>
+        <span *ngIf="f['name'].errors['minlength']"
+          >Name must be at least 2 characters</span
+        >
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="input-wrapper">
+        <svg
+          class="input-icon"
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path
+            d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+          ></path>
+          <polyline points="22,6 12,13 2,6"></polyline>
+        </svg>
+        <input
+          type="email"
+          formControlName="email"
+          placeholder="Email"
+          [class.invalid]="submitted && f['email'].errors"
+        />
+      </div>
+      <div *ngIf="submitted && f['email'].errors" class="error-message">
+        <span *ngIf="f['email'].errors['required']">Email is required</span>
+        <span *ngIf="f['email'].errors['email']"
+          >Please enter a valid email</span
+        >
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="input-wrapper">
+        <svg
+          class="input-icon"
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path
+            d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+          ></path>
+          <polyline points="22,6 12,13 2,6"></polyline>
+        </svg>
+        <input
+          type="email"
+          formControlName="confirmEmail"
+          placeholder="Confirm Email"
+          [class.invalid]="
+            (submitted && f['confirmEmail'].errors) || emailMismatchError
+          "
+        />
+      </div>
+      <div *ngIf="submitted && f['confirmEmail'].errors" class="error-message">
+        <span *ngIf="f['confirmEmail'].errors['required']"
+          >Confirm Email is required</span
+        >
+        <span *ngIf="f['confirmEmail'].errors['email']"
+          >Please enter a valid email</span
+        >
+      </div>
+      <div *ngIf="emailMismatchError" class="error-message">
+        <span>Emails do not match!</span>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="input-wrapper">
+        <svg
+          class="input-icon"
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path
+            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+          ></path>
+        </svg>
+        <input
+          type="tel"
+          formControlName="phone"
+          placeholder="Phone"
+          [class.invalid]="submitted && f['phone'].errors"
+        />
+      </div>
+      <div *ngIf="submitted && f['phone'].errors" class="error-message">
+        <span *ngIf="f['phone'].errors['required']">Phone is required</span>
+        <span *ngIf="f['phone'].errors['pattern']"
+          >Please enter a valid phone number (10-15 digits)</span
+        >
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="input-wrapper">
+        <svg
+          class="input-icon"
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+          <line x1="16" y1="2" x2="16" y2="6"></line>
+          <line x1="8" y1="2" x2="8" y2="6"></line>
+          <line x1="3" y1="10" x2="21" y2="10"></line>
+        </svg>
+        <input
+          type="date"
+          formControlName="date"
+          placeholder="Select Date"
+          [class.invalid]="submitted && f['date'].errors"
+        />
+      </div>
+      <div *ngIf="submitted && f['date'].errors" class="error-message">
+        <span *ngIf="f['date'].errors['required']">Date is required</span>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="input-wrapper">
+        <svg
+          class="input-icon"
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+          <circle cx="12" cy="7" r="4"></circle>
+        </svg>
+        <input
+          type="number"
+          formControlName="tickets"
+          placeholder="Number of Ticket"
+          [class.invalid]="submitted && f['tickets'].errors"
+        />
+      </div>
+      <div *ngIf="submitted && f['tickets'].errors" class="error-message">
+        <span *ngIf="f['tickets'].errors['required']"
+          >Number of tickets is required</span
+        >
+        <span *ngIf="f['tickets'].errors['min']"
+          >At least 1 ticket is required</span
+        >
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="input-wrapper textarea-wrapper">
+        <svg
+          class="input-icon"
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path
+            d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"
+          ></path>
+        </svg>
+        <textarea
+          formControlName="message"
+          placeholder="Message"
+          rows="4"
+        ></textarea>
+      </div>
+    </div>
+
+    <div class="form-buttons">
+      <app-button
+        label="Check Availability"
+        (click)="checkAvailability()"
+        buttonClass="btn btn-check"
+      ></app-button>
+      <app-button
+        label="Book Now"
+        (click)="onSubmit()"
+        buttonClass="btn btn-book"
+      ></app-button>
+    </div>
+
+    <div *ngIf="availabilityMessage" class="info-message">
+      {{ availabilityMessage }}
+    </div>
+    <div *ngIf="successMessage" class="success-message">
+      {{ successMessage }}
+    </div>
+  </form>
+</div>
