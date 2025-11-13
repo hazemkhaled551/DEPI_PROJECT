@@ -4,7 +4,7 @@
 >
   <div class="container-md">
     <a class="navbar-brand" href="#"
-      ><img src="../../../assets/logo2.png" alt=""
+      ><img src="../../../assets/logo.png" alt=""
     /></a>
     <button
       class="navbar-toggler"
@@ -20,7 +20,9 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav m-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" [routerLink]="['home']" >Home</a>
+          <a class="nav-link" aria-current="page" [routerLink]="['home']"
+            >Home</a
+          >
         </li>
         <li class="nav-item">
           <a class="nav-link" [routerLink]="['about']">About</a>
@@ -30,7 +32,95 @@
           <a class="nav-link" [routerLink]="['packages']">Packages</a>
         </li>
       </ul>
-      <app-button label="Get in touch"></app-button>
+    
+      <button
+        type="button"
+        class="btn"
+        data-bs-toggle="modal"
+        data-bs-target="#exampleModal"
+      >
+        build your own package
+      </button>
     </div>
   </div>
 </nav>
+
+<div
+  class="modal fade"
+  id="exampleModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5 text-center" id="exampleModalLabel">
+          Build Your Own Package
+        </h1>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-3">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Enter destination (country, region or city)"
+            [(ngModel)]="destination1"
+          />
+        </div>
+        <div class="mb-3">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Enter destination (country, region or city)"
+            [(ngModel)]="destination2"
+          />
+        </div>
+
+        
+        <div class="row mt-3">
+          <div class="col">
+            <input type="date" class="form-control" [(ngModel)]="startDate" />
+          </div>
+          <div class="col">
+            <select class="form-select" [(ngModel)]="guests">
+              <option *ngFor="let g of guestOptions" [value]="g">
+                {{ g }} adults
+              </option>
+            </select>
+          </div>
+        </div>
+
+        
+        <label class="form-label mt-3">Activities preferences (optional)</label>
+        <div class="row">
+          <div class="col" *ngFor="let activity of activities">
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                [(ngModel)]="activity.selected"
+                [id]="activity.name"
+              />
+              <label class="form-check-label" [for]="activity.name">{{
+                activity.name
+              }}</label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn" data-bs-dismiss="modal">
+          Close
+        </button>
+        <button type="button" class="btn">Build</button>
+      </div>
+    </div>
+  </div>
+</div>
