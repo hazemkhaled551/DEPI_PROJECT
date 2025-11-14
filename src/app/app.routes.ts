@@ -7,6 +7,7 @@ import { AboutComponent } from './Components/about/about.component';
 import { ProductComponent } from './Components/product/product.component';
 import { NotfoundComponent } from './Components/notfound/notfound.component';
 import { PackageDetailsComponent } from './Components/package-details/package-details.component';
+import { GalleryComponent } from './Components/gallery/gallery.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -19,6 +20,7 @@ export const routes: Routes = [
       { path: '', redirectTo: 'tour-plan', pathMatch: 'full' },
       { path: 'tour-plan', component: TourPlanComponent },
       { path: 'location', component: LocationComponent },
+      {path: 'gallery', component: GalleryComponent},
     ],
   },
   { path: '**', component: NotfoundComponent },

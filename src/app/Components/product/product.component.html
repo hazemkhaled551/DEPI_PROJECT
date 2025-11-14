@@ -1,17 +1,6 @@
 <!-- ===== HERO SECTION ===== -->
 <header class="hero">
-  <nav class="navbar">
-    <div class="logo">Travel</div>
-
-    <ul class="nav-links">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Services</a></li>
-      <li><a href="#">Upcoming Packages</a></li>
-    </ul>
-
-    <button class="btn-contact">Get In Touch</button>
-  </nav>
+ 
 
   <div class="hero-content">
     <p class="subtitle">SEARCH YOUR</p>
@@ -38,7 +27,9 @@
     <div class="cards-container">
       <div class="card" *ngFor="let product of filteredProducts">
         <div class="card-image">
-          <img [src]="product.image" [alt]="product.title" />
+          <a [routerLink]="['/packages-details']">
+            <img [src]="product.image" alt="" />
+          </a>
           <div class="card-overlay">
             <span>📅 {{ product.date }}</span>
             <span>🗓️ {{ product.month }}</span>
