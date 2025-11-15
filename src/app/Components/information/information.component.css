@@ -1,0 +1,17 @@
+.info .head h2 {
+  font-size: 32px;
+  font-weight: 700;
+  font-family: "Volkhov", serif;
+  color: var(--secondary-color);
+}
+.tour-info table td:first-child {
+  color: var(--primary-color);
+  font-weight: 600;
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+}
+.gallary h1 {
+  font-weight: bold;
+  font-family: "Volkhov", serif;
+  color: var(--secondary-color);
+}

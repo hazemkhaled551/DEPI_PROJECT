@@ -8,6 +8,7 @@ import { ProductComponent } from './Components/product/product.component';
 import { NotfoundComponent } from './Components/notfound/notfound.component';
 import { PackageDetailsComponent } from './Components/package-details/package-details.component';
 import { GalleryComponent } from './Components/gallery/gallery.component';
+import { InformationComponent } from './Components/information/information.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -17,7 +18,8 @@ export const routes: Routes = [
     path: 'packages-details',
     component: PackageDetailsComponent,
     children: [
-      { path: '', redirectTo: 'tour-plan', pathMatch: 'full' },
+      { path: '', redirectTo: 'information', pathMatch: 'full' },
+      { path: 'information', component: InformationComponent },
       { path: 'tour-plan', component: TourPlanComponent },
       { path: 'location', component: LocationComponent },
       {path: 'gallery', component: GalleryComponent},
